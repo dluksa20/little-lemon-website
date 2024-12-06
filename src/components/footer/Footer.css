@@ -37,3 +37,31 @@ h4{
 .footer-links ul{
     list-style: none;
 }
+
+@media (max-width: 600px){
+    .socials h4{
+        display: none;
+    }
+    .footer-items{
+        /* width: 100vw; */
+        display: grid;
+        grid-template-rows: auto auto;
+        grid-template-columns: 2fr 2fr;
+        row-gap: 10px;
+        align-items: center;
+        justify-items: center;
+        padding: 0;
+    }
+    .footer-links h4{
+        display: none;
+    }
+    .footer-links ul{
+        display: flex;
+    }
+    .about{
+        grid-column: span 2;
+    }
+    .socials{
+        display: flex;
+    }
+}

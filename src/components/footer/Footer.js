@@ -12,8 +12,7 @@ const Footer = () => {
         <div className="footer-links">
           <h4>Links</h4>
           <ul>
-            <li><a href="/about">About</a></li>
-            <li><a href="/contact">Contact</a></li>
+            <li><a href="/contact">Contact Us</a></li>
           </ul>
         </div>
         <div className="socials">
