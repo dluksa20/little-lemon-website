@@ -6,7 +6,7 @@ function App() {
   return (
     <div className='main'>
       <Header/>
-      <Footer/>
+      {/* <Footer/> */}
     </div>
   );
 }

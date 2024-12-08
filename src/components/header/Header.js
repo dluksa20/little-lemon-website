@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import logo from "../../assets/logo.jpg"
-import hamburger from '../../assets/hamburger_menu.svg'
-import basket from '../../assets/basket.svg'
+import { ReactComponent as Hamburger } from '../../assets/hamburger_menu.svg'
+import {ReactComponent as Basket} from '../../assets/basket.svg'
 import './Header.css'
 
 
@@ -12,24 +12,22 @@ const Header = () => {
   };
 
   return (
-    <header className="header">
+    <header className="header-container">
       <div className="logo-container">
-        <img className="mobile-icon" src={basket}/>
+        <Basket className="mobile-icon shopping-basket"/>
         <img className="logo" src={logo} alt="website logo"/>
-        <img className="mobile-icon" src={hamburger} onClick={handleMenuToggle}/>
+        <Hamburger className="mobile-icon hamburger-menu" onClick={handleMenuToggle}/>
       </div>
 
-      <div className="menu-icon" onClick={handleMenuToggle}>
-        <span className="bar"></span>
-        <span className="bar"></span>
-        <span className="bar"></span>
+      <div className="drop-menu" onClick={handleMenuToggle}>
+        <div/>
       </div>
       <nav className="nav-container">
         <ul className="links">
           <li><a href="/">Home</a></li>
           <li><a href="/about">About</a></li>
           <li><a href="/services">Menu</a></li>
-          <li><a href="/contact">Reserve a Table</a></li>
+          <li><a href="/contact">Book Now</a></li>
         </ul>
       </nav>
     </header>
