@@ -1,0 +1,102 @@
+
+.markazi-regular{
+    font-family: "Markazi Text", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
+.karla-medium {
+    font-family: "Karla", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+  }
+
+:root {
+    --bg-primary: #EDEFEE;
+    --text-primary: #495E57;
+    --text-hover: #F4CE14;
+    --font-header: "Markazi Text";
+    --font-text: "Karla";
+    --fs-medium: 1.375rem;
+    --f-white: #fff;
+
+}
+.mobile-navigation{
+    display: none;
+}
+
+.header-container{
+    background-color: var(--bg-primary);
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+
+.navigation ul{
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    color: var(--text-primary);
+    font-family: var(--font-header);
+    font-size: var(--fs-medium);
+}
+.navigation li {
+    padding: 0.5rem 1rem;
+    border-radius: 18px;
+}
+.navigation li:hover{
+    cursor: pointer;
+    background-color: var(--text-primary);
+    transition: background-color 0.9s ease, color 0.3s ease;
+    a{
+        color: var(--f-white);
+    }
+}
+.navigation a{
+    text-decoration: none;
+    color: var(--text-primary);
+}
+
+.navigation li:last-child{
+    background-color: var(--text-primary);
+    color: var(--f-white);
+    a{
+        color: var(--f-white);
+    }
+}
+.navigation li:last-child:hover{
+    opacity: 0.9;
+}
+
+/* mobile display */
+@media (max-width: 600px){
+    .navigation{
+        display: none;
+    }
+    .mobile-navigation{
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+    }
+    .mobile-navigation svg {
+        height: 25px;
+        width: 25px;
+        fill: var(--text-primary);
+        transition: fill 0.3s ease;
+    }
+    .mobile-navigation svg:hover {
+        cursor: pointer;
+        fill: var(--text-hover);
+    }
+    .header-container{
+        display: flex;
+        justify-content: space-between;
+        padding: .5rem 2rem;
+    }
+}
+
+

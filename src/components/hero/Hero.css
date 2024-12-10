@@ -1,0 +1,50 @@
+.markazi-regular{
+    font-family: "Markazi Text", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
+.karla-medium {
+    font-family: "Karla", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+  }
+
+:root {
+    --bg-primary: #EDEFEE;
+    --text-primary: #495E57;
+    --text-hover: #F4CE14;
+    --font-header: "Markazi Text";
+    --font-text: "Karla";
+    --fs-small: .75rem;
+    --fs-medium: 1.125rem;
+    --f-white: #fff;
+    --f-black: #000;
+
+}
+
+.hero-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+    padding-top: 3rem;
+    background: var(--text-primary);
+
+}
+.hero-left{
+    display: grid;
+    width: 70%;
+    justify-content: center;
+    align-items: center;
+}
+.hero-right{
+    grid-row: span  2;
+}
+
+
+.hero-right img{
+    height: 400px;
+    width: 400px;
+}

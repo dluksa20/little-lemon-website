@@ -1,0 +1,16 @@
+
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+  }
+.header{
+    top: 0;
+    position: relative;
+}
+.footer{
+    justify-self: end;
+    bottom: 0;
+    position:static;
+}
