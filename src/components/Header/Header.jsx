@@ -1,5 +1,5 @@
 import React from 'react'
-import {ReactComponent as Logo} from '../../assets/icons/Logo.svg'
+import logo from '../../assets/icons/Logo.svg'
 import {ReactComponent as Hamburger} from '../../assets/icons/hamburger.svg'
 import {ReactComponent as Basket} from '../../assets/icons/basket.svg'
 import './Header.css'
@@ -8,7 +8,7 @@ import './Header.css'
 const Header = () => {
   return (
     <header className='header-container'>
-            <a href='/'><Logo /></a>
+            <a href='/'><img className='logo' src={logo} alt="" /></a>
 
         <div className="mobile-navigation">
             <Basket/>

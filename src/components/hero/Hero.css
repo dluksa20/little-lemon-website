@@ -1,50 +1,91 @@
-.markazi-regular{
-    font-family: "Markazi Text", serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-  }
-.karla-medium {
-    font-family: "Karla", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 600;
-    font-style: normal;
-  }
-
 :root {
     --bg-primary: #EDEFEE;
     --text-primary: #495E57;
     --text-hover: #F4CE14;
-    --font-header: "Markazi Text";
-    --font-text: "Karla";
-    --fs-small: .75rem;
+    --font-header: "Markazi Text", serif;
+    --font-text: "Karla", sans-serif;
+    --fs-small: 0.75rem;
     --fs-medium: 1.125rem;
+    --fs-large: 1.75rem;
+    --fs-xxl: 3rem;
     --f-white: #fff;
     --f-black: #000;
-
 }
 
-.hero-container{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    justify-items: center;
-    padding-top: 3rem;
-    background: var(--text-primary);
-
-}
-.hero-left{
-    display: grid;
-    width: 70%;
-    justify-content: center;
+.hero-container {
+    display: flex;
+    justify-content: flex-end; 
     align-items: center;
+    background: linear-gradient(to top, var(--f-white), var(--text-primary));
+
+
 }
-.hero-right{
-    grid-row: span  2;
+
+.hero-left {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    color: var(--f-white);
+    width: 35%; 
+}
+
+.hero-left h1 {
+    font-family: var(--font-header);
+    font-size: var(--fs-xxl);
+    color: var(--text-hover);
+    line-height: 0.8;
+}
+
+.hero-left h3 {
+    font-family: var(--font-header);
+    font-size: var(--fs-large);
+    line-height: 1;
+}
+
+.hero-left p {
+    font-family: var(--font-text);
+    max-width: 70%;
+    font-size: var(--fs-medium);
+}
+
+.hero-right {
+    display: flex;
+    justify-content: flex-end; 
+    width: 50%;
+}
+
+.hero-image {
+    width: 100%;
+    max-width: 700px;
+    aspect-ratio: 1 / 1;
+    mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 90%);
 }
 
 
-.hero-right img{
-    height: 400px;
-    width: 400px;
+
+
+button {
+    font-family: var(--font-text);
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 10px 20px;
+    max-width: 50%;
+    background-color: var(--text-hover);
+    color: var(--f-black);
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: var(--text-hover);
+    color: var(--text-primary);
+    transform: scale(1.1);
+    opacity: 0.9;
+}
+
+button:active {
+    transform: scale(0.95);
+    background-color: var(--bg-primary);
 }

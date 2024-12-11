@@ -9,7 +9,7 @@ const App = () => {
   return (
     <div className="main">
       <Header className='header' />
-      <Hero />
+      <Hero className='hero' />
       <Footer className='footer' />
     </div>
   );
